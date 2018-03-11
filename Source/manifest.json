@@ -1,0 +1,26 @@
+{
+	"manifest_version": 2,
+
+	"name": "Filth Filter",
+    "short_name": "Filth Filter",
+	"description": "Humourously replaces bad language within webpages",
+	"author": "Tom Austin",
+	"version": "0.1",
+
+	"icons": {
+		"16": "icon16.png",
+		"32": "icon32.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+
+	"content_scripts":
+	[
+		{
+			"matches": ["*://*/*"],
+			"all_frames": true,
+			"js": ["content_script.js"],
+			"run_at": "document_end"
+		}
+	]
+}
