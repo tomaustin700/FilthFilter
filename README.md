@@ -1,2 +1,2 @@
-# FilthFilter
-Chrome extension which replaces bad language with humorous alternate word
+# Filth Filter
+Chrome extension which humourously replaces bad language within webpages
