@@ -25,11 +25,14 @@ function replaceText(v)
     var replacements = [
      { realword: 'shit', potentialReplacements: [{ replacement: 'poop' }, { replacement: 'ploppers' }, { replacement: 'crud' }, { replacement: 'manure' }, { replacement: 'number two' }, { replacement: 'sugar' }, ] },
      { realword: 'fuck', potentialReplacements: [{ replacement: 'jeepers' }, { replacement: 'fudge' }, { replacement: 'frig' }, { replacement: 'holy cow' }, { replacement: 'gosh' }, { replacement: 'frack' }, ] },
+     { realword: 'cock', potentialReplacements: [{ replacement: 'winky' }, { replacement: 'willy' }, { replacement: 'sausage' }, { replacement: 'donger' }, { replacement: 'shlong' }, ] },
 
     ];
 
     v = v.replace(/\bshit\b/gi, replacements.find(x => x.realword == 'shit').potentialReplacements[Math.floor(Math.random() * 5) + 1].replacement);
     v = v.replace(/\bfuck\b/gi, replacements.find(x => x.realword == 'fuck').potentialReplacements[Math.floor(Math.random() * 5) + 1].replacement);
+    v = v.replace(/\bcock\b/gi, replacements.find(x => x.realword == 'cock').potentialReplacements[Math.floor(Math.random() * 4) + 1].replacement);
+    v = v.replace(/\bpenis\b/gi, replacements.find(x => x.realword == 'cock').potentialReplacements[Math.floor(Math.random() * 4) + 1].replacement);
 
     return v;
 }
