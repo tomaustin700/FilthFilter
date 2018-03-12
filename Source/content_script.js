@@ -26,13 +26,19 @@ function replaceText(v)
      { realword: 'shit', potentialReplacements: [{ replacement: 'poop' }, { replacement: 'ploppers' }, { replacement: 'crud' }, { replacement: 'manure' }, { replacement: 'number two' }, { replacement: 'sugar' }, ] },
      { realword: 'fuck', potentialReplacements: [{ replacement: 'jeepers' }, { replacement: 'fudge' }, { replacement: 'frig' }, { replacement: 'holy cow' }, { replacement: 'gosh' }, { replacement: 'frack' }, ] },
      { realword: 'cock', potentialReplacements: [{ replacement: 'winky' }, { replacement: 'willy' }, { replacement: 'sausage' }, { replacement: 'donger' }, { replacement: 'shlong' }, ] },
-
+     { realword: 'fucking', potentialReplacements: [{ replacement: 'humping' }, { replacement: 'doing it' }, { replacement: 'bonking' }, { replacement: 'fornicating' }, { replacement: 'copulating' }, { replacement: 'procreating' }, ] },
+     { realword: 'piss', potentialReplacements: [{ replacement: 'wee' }, { replacement: 'yellow mellow' }, { replacement: 'golden fountain' }] },
+     { realword: 'arse', potentialReplacements: [{ replacement: 'bottom' }, { replacement: 'bum' }, { replacement: 'botty' }, { replacement: 'buttocks' }, { replacement: 'rear' }, { replacement: 'rump' }] },
     ];
 
-    v = v.replace(/\bshit\b/gi, replacements.find(x => x.realword == 'shit').potentialReplacements[Math.floor(Math.random() * 5) + 1].replacement);
-    v = v.replace(/\bfuck\b/gi, replacements.find(x => x.realword == 'fuck').potentialReplacements[Math.floor(Math.random() * 5) + 1].replacement);
-    v = v.replace(/\bcock\b/gi, replacements.find(x => x.realword == 'cock').potentialReplacements[Math.floor(Math.random() * 4) + 1].replacement);
-    v = v.replace(/\bpenis\b/gi, replacements.find(x => x.realword == 'cock').potentialReplacements[Math.floor(Math.random() * 4) + 1].replacement);
+    v = v.replace(/\bshit\b/gi, replacements.find(x => x.realword == 'shit').potentialReplacements[Math.floor(Math.random() * Math.floor(6))].replacement);
+    v = v.replace(/\bfuck\b/gi, replacements.find(x => x.realword == 'fuck').potentialReplacements[Math.floor(Math.random() * Math.floor(6))].replacement);
+    v = v.replace(/\bcock\b/gi, replacements.find(x => x.realword == 'cock').potentialReplacements[Math.floor(Math.random() * Math.floor(5))].replacement);
+    v = v.replace(/\bpenis\b/gi, replacements.find(x => x.realword == 'cock').potentialReplacements[Math.floor(Math.random() * Math.floor(5))].replacement);
+    v = v.replace(/\bfucking\b/gi, replacements.find(x => x.realword == 'fucking').potentialReplacements[Math.floor(Math.random() * Math.floor(5))].replacement);
+    v = v.replace(/\bpiss\b/gi, replacements.find(x => x.realword == 'piss').potentialReplacements[Math.floor(Math.random() * Math.floor(3))].replacement);
+    v = v.replace(/\barse\b/gi, replacements.find(x => x.realword == 'arse').potentialReplacements[Math.floor(Math.random() * Math.floor(6))].replacement);
+    v = v.replace(/\bass\b/gi, replacements.find(x => x.realword == 'arse').potentialReplacements[Math.floor(Math.random() * Math.floor(6))].replacement);
 
     return v;
 }
